@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Paediatric speech and language therapy with Lucy Parker. Supporting children and young people aged 1–18, with a specialism in autism and social communication.">
-  <meta name="theme-color" content="#f7f3fb">
+  <meta name="description" content="The Communication Garden offers independent paediatric speech and language therapy with Lucy Parker, supporting children and young people aged 1–18.">
+  <meta name="theme-color" content="#fffaf3">
   <title>Lucy Parker | Independent Speech & Language Therapy</title>
   <style>
     :root {
-      --ink: #302b3b;
-      --muted: #665f70;
-      --purple: #79639a;
-      --purple-dark: #5e4a7d;
-      --lilac: #eee7f6;
-      --lilac-pale: #f8f5fb;
-      --sage: #e7eee5;
-      --cream: #fffdf9;
+      --ink: #34313a;
+      --muted: #6c6670;
+      --purple: #8a78a7;
+      --purple-dark: #67557f;
+      --lilac: #f0eaf6;
+      --lilac-pale: #faf7fb;
+      --sage: #edf1e9;
+      --cream: #fffaf3;
       --white: #ffffff;
-      --line: #e6dfeb;
+      --line: #e9e1e8;
       --shadow: 0 18px 45px rgba(58, 43, 75, .09);
     }
     * { box-sizing: border-box; }
@@ -48,7 +48,8 @@
     .button:hover { background: var(--purple-dark); transform: translateY(-1px); color: white; }
     .button.secondary { background: transparent; color: var(--purple-dark); }
     .button.secondary:hover { background: var(--lilac); }
-    .hero { padding: 76px 0 82px; overflow: hidden; background: linear-gradient(125deg, var(--lilac-pale) 0%, #fffdf9 57%, #edf2e9 100%); }
+    .hero { padding: 76px 0 82px; overflow: hidden; background: linear-gradient(125deg, #faf7fb 0%, #fffaf3 57%, #edf1e9 100%); position: relative; }
+    .hero::after { content: ""; position: absolute; right: 2%; bottom: 10px; width: 118px; height: 190px; opacity: .42; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 200' fill='none' stroke='%238a78a7' stroke-width='1.35' stroke-linecap='round'%3E%3Cpath d='M16 190 C36 145 58 90 78 14'/%3E%3Cpath d='M34 151 C17 148 11 137 11 126 C25 127 34 137 34 151Z M42 132 C61 130 71 118 74 105 C57 108 45 117 42 132Z M53 101 C34 96 27 84 28 73 C44 78 52 87 53 101Z M62 76 C79 71 88 60 89 48 C74 52 65 62 62 76Z M73 42 C59 36 56 25 59 15 C71 22 76 31 73 42Z'/%3E%3Cpath d='M76 20 C87 18 92 10 91 3 M75 30 C86 32 94 28 98 21 M67 49 C54 47 49 39 50 31 M84 63 C96 61 102 54 104 46'/%3E%3C/svg%3E") center/contain no-repeat; }
     .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: clamp(36px, 6vw, 76px); }
     .eyebrow { color: var(--purple-dark); text-transform: uppercase; font-size: .78rem; letter-spacing: .14em; font-weight: 800; }
     h1, h2, h3 { line-height: 1.16; letter-spacing: -.035em; }
@@ -65,7 +66,10 @@
     .trust-items div { color: var(--muted); font-size: .95rem; }
     .trust-items strong { display: block; color: var(--ink); font-size: 1.05rem; }
     section.content { padding: 82px 0; }
-    .section-heading { max-width: 690px; margin: 0 auto 42px; text-align: center; }
+    .section-heading { max-width: 690px; margin: 0 auto 42px; text-align: center; position: relative; }
+    .section-heading::after { content: ""; display: block; width: 62px; height: 2px; background: #b6a7c8; margin: 20px auto 0; border-radius: 4px; }
+    .contact-panel { position: relative; overflow: hidden; }
+    .contact-panel::after { content: ""; position: absolute; right: 20px; top: 16px; width: 74px; height: 118px; opacity: .35; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 125' fill='none' stroke='%238a78a7' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M8 120 C28 89 41 54 55 7'/%3E%3Cpath d='M25 91 C11 89 6 79 7 69 C18 72 25 80 25 91Z M35 70 C49 68 57 59 59 48 C46 51 37 60 35 70Z M43 47 C31 43 27 34 29 25 C39 30 44 37 43 47Z M53 20 C64 20 70 13 71 5'/%3E%3C/svg%3E") center/contain no-repeat; }
     h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2rem, 3.8vw, 3rem); margin: 12px 0 15px; }
     .section-heading p, .muted { color: var(--muted); }
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -93,6 +97,8 @@
       nav { gap: 14px; font-size: .9rem; }
       nav .button { padding: 8px 13px; }
       .hero { padding: 48px 0 62px; }
+      .hero::after { width: 65px; height: 110px; right: 0; bottom: 4px; opacity: .25; }
+      .contact-panel::after { width: 46px; height: 74px; right: 8px; top: 8px; opacity: .22; }
       .hero-grid, .about-grid { grid-template-columns: 1fr; }
       .portrait-frame { width: min(84%, 360px); }
       .trust-items { grid-template-columns: 1fr; gap: 12px; text-align: left; }
@@ -108,7 +114,7 @@
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#home">Lucy Parker<small>Independent Speech &amp; Language Therapy</small></a>
+    <a class="brand" href="#home">The Communication Garden<small>Speech &amp; Language Therapy with Lucy Parker</small></a>
     <nav aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#support">How I can help</a>
@@ -121,8 +127,8 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Paediatric speech &amp; language therapy</div>
-        <h1>Every child has a voice. <em>Let’s help it flourish.</em></h1>
+        <div class="eyebrow">The Communication Garden · Paediatric speech &amp; language therapy</div>
+        <h1>Growing communication. <em>Nurturing connection.</em></h1>
         <p class="lead">Friendly, individualised support for children and young people aged 1–18, with a specialism in autism and social communication. Home visits, visits to education settings and online therapy are available in the surrounding area.</p>
         <div class="actions">
           <a class="button" href="#contact">Arrange a free informal chat</a>
@@ -205,7 +211,7 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <span><strong>Lucy Parker</strong> · Independent Speech &amp; Language Therapy</span>
+    <span><strong>The Communication Garden</strong> · Independent Speech &amp; Language Therapy with Lucy Parker</span>
     <span>Supporting children and young people aged 1–18</span>
   </div>
 </footer>
